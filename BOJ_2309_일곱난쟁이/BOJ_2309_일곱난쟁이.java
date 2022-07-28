@@ -19,7 +19,7 @@ public class BOJ_2309_일곱난쟁이 {
 
 		int ri = 0;
 		int rj = 0;
-		
+
 		for (int i = 0; i < height.size(); i++) {
 			for (int j = 0; j < height.size(); j++) {
 				if (i == j) {
@@ -31,24 +31,24 @@ public class BOJ_2309_일곱난쟁이 {
 				}
 			}
 		}
-		
+
 		for (int i = height.size() - 1; i >= 0; i--) {
-			if(height.get(i) == ri) {
+			if (height.get(i) == ri) {
 				height.remove(i);
 			}
 		}
-		
+
 		for (int i = 0; i < height.size(); i++) {
-			if(height.get(i) == rj) {
+			if (height.get(i) == rj) {
 				height.remove(i);
 			}
 		}
-		
+
 		height.sort(null);
 		for (int i = 0; i < height.size(); i++) {
 			System.out.println(height.get(i));
 		}
-		
+
 		sc.close();
 	}
 }
